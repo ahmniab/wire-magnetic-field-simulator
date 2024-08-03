@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>wire</title>
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body>
+   <div class="spinner"></div>
+   
+   <div class="wire_board" id="wire_board">
+
+   </div>
+   <div class="info" id="info_form">
+      <div class="mu">μ = 4π x 10</div>
+      <div class="toggle">
+         < </div>
+            <div class="info-elements" id="wire_bord_form">
+               <label for="world_distance">How long is your world (meters)?</label>
+               <input type="number" min="0" id="world_distance">
+               <label for="world_B"> Apply a Magnetic Field on whole world
+                  </br> by (T) :
+               </label>
+               <input type="number" min="0" id="world_B" value="0">
+               <div>
+                  <label for="field_inside">Inside</label>
+                  <input type="radio" checked name="field_dir" id="field_inside" value="1">
+                  <label for="field_outside">Outside</label>
+                  <input type="radio" name="field_dir" id="field_outside" value="-1">
+               </div>
+               <!-- <div>
+                  <label for="show_field">Show Field</label>
+                  <input type="checkbox" id="show_field">
+               </div> -->
+            </div>
+            <div class="info-elements" id="wire_form">
+               <label for="current">Wire Name</label>
+               <input type="text" id="wire_name">
+               <label for="current">current (I)</label>
+               <input type="number" min="0" id="current">
+               <label for="wire_distance">distance from the left of the screen</label>
+               <input type="number" min="0" id="wire_distance">
+               <label>current diriction</label>
+               <div>
+                  <label for="curr_up">current up</label>
+                  <input type="radio" name="curr_dir" id="curr_up" value="1">
+                  <label for="curr_down">current down</label>
+                  <input type="radio" name="curr_dir" id="curr_down" value="-1">
+               </div>
+
+
+
+            </div>
+            <button class="button-24" role="button" id="add_wire_btn">Add new wire</button>
+
+      </div>
+      <script>
+         // script.js
+         document.addEventListener('DOMContentLoaded', () => {
+            // Hide spinner and show content
+            document.querySelector('.spinner').style.display = 'none';
+            // document.querySelector('.content').style.display = 'block';
+         });
+
+      </script>
+      <script src="js/wire.js"></script>
+      <script src="js/field_point.js"></script>
+      <script src="js/physics.js"></script>
+      <script src="js/templates.js"></script>
+      <script src="js/wire_board.js"></script>
+      <script src="js/info_form.js"></script>
+      <script src="js/world_mngr.js"></script>
+
+</body>
+
+</html>
